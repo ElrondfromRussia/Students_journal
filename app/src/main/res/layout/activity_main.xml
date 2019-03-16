@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02"
+            android:background="@drawable/grad4"
+            android:gravity="center"
+            android:text="Группы"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:background="@drawable/separator"
+            android:layout_height="2dp" />
+
+        <ListView
+            android:id="@+id/mainlist"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.83"
+            android:background="@drawable/grad3"
+            android:textSize="18sp">
+
+        </ListView>
+
+        <View
+            android:layout_width="wrap_content"
+            android:background="@drawable/separator"
+            android:layout_height="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/butadd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/grad1"
+                android:foreground="@drawable/minus"
+                android:foregroundGravity="fill_vertical|center_horizontal" />
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/grad1"
+                android:foreground="@drawable/update"
+                android:foregroundGravity="center_vertical|center_horizontal" />
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/add_del_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:hint="Название группы"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="425dp" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
